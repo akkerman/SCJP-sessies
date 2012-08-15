@@ -19,7 +19,7 @@ Design and create an API for a Library which enables a client to lend and return
 _Requirements_
 
 1. no duplicates
-2. when you lend an item it is subsequently NOT available and instantly due  
+2. when you lend an item it is subsequently __not__ available and instantly due  
 3. when returning an item it is subsequently available and not due  
 4. when returning an item not due and not available you may interpret it as adding to the library  
 5. none of the requirements need any 'if' statement => __choose your collections wisely__
@@ -34,27 +34,30 @@ The following code illustrates how a client would use your Library:
     
     Library library = new Library();
     library.returnItem(new Book("42")); // empty library, so item is added
-    Book b = (Book)library.lendItem("42");
+    Lendable lendable = library.lendItem("42");
+    Book b = (Book)lendable;
 
 part 2 - Generic Interface
 --------------------------
 Add a generic parameter specifying the type of the library code to the `Lendable` interface.
 
 Create at least two implementations of `Lendable` with at least one additional method  
-* Override `toString`,  
-* Optionally `override` equals and `hashcode`.  
-* Make sure your library class still compiles with this interface, you WILL have to modify the generics on your collections
 
-	Book
-		String getLibraryCode();
-		String getTitle();
-		String getAuthor();
-		
+ * Override `toString`,  
+ * Optionally `override` equals and `hashcode`.  
+ * Make sure your library class still compiles with this interface, you _will_ have to modify the generics on your collections
+ 
+For example: 
+
+    Book
+        String getLibraryCode();
+        String getTitle();
+        String getAuthor();
 	
-	CompactDisc
-		Integer getLibraryCode();
-		String getName();
-		String getArtist();
+    CompactDisc
+        Integer getLibraryCode();
+        String getName();
+        String getArtist();
 
 
 review
@@ -65,9 +68,12 @@ Otherwise send your intermediate solution for a review.
 part 3 - Generic Collection
 ---------------------------
 Turn your `Library` into a generic template.  
-A client of your code should be able to create a parameterized version of Library enabling them to lend `Book`s and `CompactDisc`s without down casting them.
+A client of your code should be able to create a parameterized version of Library enabling them to lend `Book` and `CompactDisc` without down casting them.
 
-    Book b = 
+	// omitted: bookLibrary and cdLibrary are instantiated and filled
+    Book b = bookLibrary.lendItem("42");       // input String, output Book
+    CompactDisc c = cdLibrary.lendItem(42);    // input Integer, output CompactDisc
+    CompactDisc cd = cdLibrary.lendItem("42"); // compilation error
 
 
 part 4 - Generic Generic
@@ -76,8 +82,8 @@ Create one factory method in your Library class accepting one or more specific i
 
 i.e:
  
-1. a client should be able to offer one specific library of `Book`s  
-2. a client should be able to offer several specific libraries of `CompactDisc`s  
+1. a client should be able to offer one specific library of `Book`  
+2. a client should be able to offer several specific libraries of `CompactDisc`  
 3. a Client should be able to mix the libraries
 
 Intended use: loop over the result, print each item. 
