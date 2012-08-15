@@ -2,7 +2,7 @@
 Opdracht 2 - Generic Libraries
 ==============================
 
-## part 1 - Collections
+## 1 Collections
 Design and create an API for a Library which enables a client to lend and return Lendable items
 
 
@@ -36,7 +36,7 @@ The following code illustrates how a client would use your Library:
     Lendable lendable = library.lendItem("42");
     Book b = (Book)lendable;
 
-## part 2 - Generic Interface
+## 2 Generic Interface
 Add a generic parameter specifying the type of the library code to the `Lendable` interface.
 
 Create at least two implementations of `Lendable` with at least one additional method  
@@ -72,7 +72,7 @@ A client of your code should be able to create a parameterized version of Librar
     CompactDisc cd = cdLibrary.lendItem("42"); // compilation error
 
 
-## part 4 - Generic Generic
+## 4 Generic Generic
 Create one factory method in your Library class accepting one or more specific instantiations of libraries returning a list of items due for all libraries.  
 
 i.e:
@@ -83,7 +83,7 @@ i.e:
 
 Intended use: loop over the result, print each item. 
 
-## part 5 - Optional stuff
+## 5 Optional stuff
 ### collector
 A client of your library could try modifying one of your collections. Effectively stealing them.
 
