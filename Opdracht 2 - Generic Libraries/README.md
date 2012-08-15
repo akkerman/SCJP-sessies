@@ -2,8 +2,7 @@
 Opdracht 2 - Generic Libraries
 ==============================
 
-part 1 - Collections
---------------------
+## part 1 - Collections
 Design and create an API for a Library which enables a client to lend and return Lendable items
 
 
@@ -37,8 +36,7 @@ The following code illustrates how a client would use your Library:
     Lendable lendable = library.lendItem("42");
     Book b = (Book)lendable;
 
-part 2 - Generic Interface
---------------------------
+## part 2 - Generic Interface
 Add a generic parameter specifying the type of the library code to the `Lendable` interface.
 
 Create at least two implementations of `Lendable` with at least one additional method  
@@ -60,24 +58,21 @@ For example:
         String getArtist();
 
 
-review
-------
+## review
 If you're particularly adventurous, continue with part 3.  
 Otherwise send your intermediate solution for a review.
  		
-part 3 - Generic Collection
----------------------------
+## 3 Generic Collection
 Turn your `Library` into a generic template.  
 A client of your code should be able to create a parameterized version of Library enabling them to lend `Book` and `CompactDisc` without down casting them.
 
-	// omitted: bookLibrary and cdLibrary are instantiated and filled
+	// omitted: declaration , instantiation and filling of two distinct libraries
     Book b = bookLibrary.lendItem("42");       // input String, output Book
     CompactDisc c = cdLibrary.lendItem(42);    // input Integer, output CompactDisc
     CompactDisc cd = cdLibrary.lendItem("42"); // compilation error
 
 
-part 4 - Generic Generic
-------------------------
+## part 4 - Generic Generic
 Create one factory method in your Library class accepting one or more specific instantiations of libraries returning a list of items due for all libraries.  
 
 i.e:
@@ -87,3 +82,22 @@ i.e:
 3. a Client should be able to mix the libraries
 
 Intended use: loop over the result, print each item. 
+
+## part 5 - Optional stuff
+### collector
+A client of your library could try modifying one of your collections. Effectively stealing them.
+
+    library.dueItems().clear();
+    
+or    
+
+    for (Iterator iter = library.availableItems().iterator(); iter.hasNext(); )       
+       iter.remove();
+         
+How would you make sure the client will not get away with it?
+
+### sort yourself out
+Suppose a client wants items in the library sorted and have some control over the ordering by implementing the `Comparable` interface.   
+How would you support this requirement?
+ 
+
