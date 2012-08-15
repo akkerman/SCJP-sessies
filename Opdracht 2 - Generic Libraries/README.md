@@ -44,7 +44,7 @@ Add a generic parameter specifying the type of the library code to the `Lendable
 Create at least two implementations of `Lendable` with at least one additional method  
 
  * Override `toString`,  
- * Optionally `override` equals and `hashcode`.  
+ * Optionally override `equals` and `hashcode`.  
  * Make sure your library class still compiles with this interface, you _will_ have to modify the generics on your collections
  
 For example: 
@@ -62,7 +62,7 @@ For example:
 
 review
 ------
-If you're particularly adventurous, continue with part 4.  
+If you're particularly adventurous, continue with part 3.  
 Otherwise send your intermediate solution for a review.
  		
 part 3 - Generic Collection
