@@ -26,7 +26,7 @@ Instantiatie van een Entiteit gebeurd, door mijn test, via een VoertuigFabriek d
 
 Restricties
 ----------
-De implementatie van methodes moet zoveel mogelijk hergebruikt worden. kopi�ren is in deze opdracht NIET hergebruik.  
+De implementatie van methodes moet zoveel mogelijk hergebruikt worden. kopieren is in deze opdracht NIET hergebruik.  
 Hergebruik wil wel zeggen dat als ik de implementatie van vaar, rij, getSnelheid etc aan wil passen ik dat op 1 plek doe.  
 
 Onder geen beding mag de test worden aangepast.  
