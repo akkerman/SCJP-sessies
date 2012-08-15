@@ -3,18 +3,18 @@ Opdracht 1 - the Diamond Problem
 
 _Maak de volgende 4 entiteiten met bijbehorende methodes_:  
 
-Voertuig  
-  String getNaam()  
-  int getSnelheid()  
-  setSnelheid(int)  
+    Voertuig  
+      String getNaam()  
+      int getSnelheid()  
+      setSnelheid(int)  
 
-Auto  
-  rij()  
+    Auto  
+      rij()  
 
-Boot  
- vaar()  
+    Boot  
+      vaar()  
 
-Amfibie  
+    Amfibie  
 
 Relaties
 --------
@@ -26,7 +26,7 @@ Instantiatie van een Entiteit gebeurd, door mijn test, via een VoertuigFabriek d
 
 Restricties
 ----------
-De implementatie van methodes moet zoveel mogelijk hergebruikt worden. kopiëren is in deze opdracht NIET hergebruik.  
+De implementatie van methodes moet zoveel mogelijk hergebruikt worden. kopiï¿½ren is in deze opdracht NIET hergebruik.  
 Hergebruik wil wel zeggen dat als ik de implementatie van vaar, rij, getSnelheid etc aan wil passen ik dat op 1 plek doe.  
 
 Onder geen beding mag de test worden aangepast.  
