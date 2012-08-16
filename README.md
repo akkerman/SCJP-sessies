@@ -13,7 +13,7 @@ Zie de readme.md in het project voor de originele opdracht omschrijving.
 Opdracht 2 - Generic Libraries
 ------------------------------
 Opdracht stub voor de opdracht ter voor bereiding van Hoofdstuk 7 over Generics and Collections.
-Zie de readme.md in het procjes voor de opdracht omschrijving.
+Zie de readme.md in het project voor de opdracht omschrijving.
 
 Sessie 1 - H1,H2
 -------------------
