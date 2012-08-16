@@ -8,7 +8,7 @@ public class Library<CODE> {
 	Map<CODE, Lendable<CODE>> available = new HashMap<CODE, Lendable<CODE>>();
 	Map<CODE, Lendable<CODE>> due = new HashMap<CODE, Lendable<CODE>>();
 
-	public Lendable<CODE> lendItem(String libraryCode) {
+	public Lendable<CODE> lendItem(CODE libraryCode) {
 		Lendable<CODE> item = available.get(libraryCode);
 		if (item != null) {
 			available.remove(item.getLibraryCode());

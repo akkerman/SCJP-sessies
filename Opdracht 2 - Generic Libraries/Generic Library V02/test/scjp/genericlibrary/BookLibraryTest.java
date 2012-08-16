@@ -8,14 +8,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 @SuppressWarnings("rawtypes")
-public class LibraryTest {
+public class BookLibraryTest {
 
 	private static final String CODE_IN = "in";
 	private static final String CODE_OUT = "out";
 
 	private Library<String> library;
-	private final Lendable<String> lendableIn = new TestLendable(CODE_IN);
-	private final Lendable<String> lendableIn2 = new TestLendable(CODE_IN);
+	private final Lendable<String> lendableIn = new Book(CODE_IN);
+	private final Lendable<String> lendableIn2 = new Book(CODE_IN);
 
 	// private final Lendable lendableOut = new TestLendable(CODE_OUT);
 
