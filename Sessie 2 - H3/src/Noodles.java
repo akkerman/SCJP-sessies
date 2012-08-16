@@ -14,7 +14,7 @@ public class Noodles {
 				wagamama = s; 
 			System.out.println(s);
 		}
-		System.out.println(test);
+		System.out.println(istrue);
 		System.out.println(wagamama);
 	}
 	
