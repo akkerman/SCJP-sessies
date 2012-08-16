@@ -3,7 +3,7 @@ Opdracht 2 - Generic Libraries
 ==============================
 
 ## 1 Collections
-Design and create an API for a Library which enables a client to lend and return Lendable items
+Design and create an API for a Library which enables a client to lend and return `Lendable` items
 
 
     Interface Lendable
@@ -37,9 +37,9 @@ The following code illustrates how a client would use your Library:
     Book b = (Book)lendable;
 
 ## 2 Generic Interface
-Add a generic parameter specifying the type of the library code to the `Lendable` interface.
+Add a generic parameter to the `Lendable` interface, specifying the type of the library code.
 
-Create at least two implementations of `Lendable` with at least one additional method  
+Create at least two implementations of `Lendable` with at least one additional method.
 
  * Override `toString`,  
  * Optionally override `equals` and `hashcode`.  
