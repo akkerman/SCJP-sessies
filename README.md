@@ -33,5 +33,5 @@ De opgaven in de sessie van Gareth
 
 Sessie 2 - H4
 -------------
-De opgaven in de sessie van Adam
+De opgaven in de sessie van Adam  
 *Hoofdstuk 4 - Operators*
