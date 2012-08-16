@@ -21,7 +21,7 @@ _Requirements_
 2. when you lend an item it is subsequently __not__ available and instantly due  
 3. when returning an item it is subsequently available and not due  
 4. when returning an item not due and not available you may interpret it as adding to the library  
-5. none of the requirements need any 'if' statement => __choose your collections wisely__
+5. the requirements hardly need any 'if' statement => __choose your collections wisely__
 
 
 Suppose you have a book with library code "42"
