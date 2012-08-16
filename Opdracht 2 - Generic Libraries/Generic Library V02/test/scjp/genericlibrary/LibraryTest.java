@@ -13,15 +13,15 @@ public class LibraryTest {
 	private static final String CODE_IN = "in";
 	private static final String CODE_OUT = "out";
 
-	private Library library;
-	private final Lendable lendableIn = new TestLendable(CODE_IN);
-	private final Lendable lendableIn2 = new TestLendable(CODE_IN);
+	private Library<String> library;
+	private final Lendable<String> lendableIn = new TestLendable(CODE_IN);
+	private final Lendable<String> lendableIn2 = new TestLendable(CODE_IN);
 
 	// private final Lendable lendableOut = new TestLendable(CODE_OUT);
 
 	@Before
 	public void createLibrary() {
-		library = new Library();
+		library = new Library<String>();
 		library.returnItem(lendableIn);
 	}
 

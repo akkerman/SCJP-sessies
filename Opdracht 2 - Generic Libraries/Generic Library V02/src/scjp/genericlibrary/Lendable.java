@@ -1,5 +1,5 @@
 package scjp.genericlibrary;
 
-public interface Lendable {
-	String getLibraryCode();
+public interface Lendable<CODE> {
+	CODE getLibraryCode();
 }

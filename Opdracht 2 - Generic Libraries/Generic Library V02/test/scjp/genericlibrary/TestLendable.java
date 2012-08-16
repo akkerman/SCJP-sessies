@@ -1,6 +1,6 @@
 package scjp.genericlibrary;
 
-class TestLendable implements Lendable {
+class TestLendable implements Lendable<String> {
 	private String code;
 
 	public TestLendable(String code) {
