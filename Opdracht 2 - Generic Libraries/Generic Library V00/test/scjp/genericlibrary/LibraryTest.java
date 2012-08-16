@@ -53,7 +53,7 @@ public class LibraryTest {
 	}
 
 	@Test
-	public void testAvailableItems() {
+	public void testAvailableItems_BeforeLend() {
 		library.lendItem(CODE_IN);
 		Collection available = library.availableItems();
 		assertTrue("There are still items available", available.isEmpty());
@@ -62,14 +62,22 @@ public class LibraryTest {
 	@Test
 	public void testDueItems_BeforeLend() {
 		Collection due = library.dueItems();
-		library.lendItem(CODE_IN);
 		assertTrue("There are already items due", due.isEmpty());
+		library.lendItem(CODE_IN);
 	}
 
 	@Test
 	public void testDueItems_AfterLend() {
 		library.lendItem(CODE_IN);
 		Collection due = library.dueItems();
-		assertTrue("There are already items due", due.isEmpty());
+		assertFalse("There are no items due", due.isEmpty());
+		
+	}
+	
+	@Test
+	public void testDueItems_AfterLend_NotAvailable() {
+		library.lendItem(CODE_OUT);
+		Collection due = library.dueItems();
+		assertTrue("There are items due, thow nothing should be lended", due.isEmpty());			
 	}
 }
