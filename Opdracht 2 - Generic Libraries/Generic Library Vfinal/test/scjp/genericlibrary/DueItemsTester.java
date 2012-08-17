@@ -36,7 +36,11 @@ public class DueItemsTester {
 		cdLibrary.lendItem(1);
 		cdLibrary.lendItem(3);
 		
-		Collection<? extends Lendable<? extends Object>> itemsDue = Library.allDueItems(bookLibrary, cdLibrary);
+		Collection<Lendable<?>> itemsDue = Library.allDueItems(bookLibrary, cdLibrary);
+		
+		for (Lendable<?> item : itemsDue) {
+			System.out.println(item);
+		}
 		
 		
 	}

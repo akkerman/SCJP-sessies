@@ -31,14 +31,15 @@ public class Library<C, L extends Lendable<C>> {
 	public Collection<L> dueItems() {
 		return due.values();
 	}
-	
-	public static Collection<? extends Lendable<? extends Object>> allDueItems(Library<?, ? extends Lendable<?>>... libraries) {
-		Collection<? extends Lendable<? extends Object>> collection = new ArrayList<Lendable<? extends Object>>();
-		
-//		for (Library<?, ? extends Lendable<?>> lib : libraries) {
-//			collection.addAll((Collection<?>) lib);			
-//		}
-		
-		return collection;
+
+	public static Collection<Lendable<?>> allDueItems(Library<?, ?>... libraries) {
+
+		Collection<Lendable<?>> dueitems = new ArrayList<Lendable<?>>();
+
+		for (Library<?, ?> lib : libraries) {
+			dueitems.addAll(lib.dueItems());
+		}
+
+		return dueitems;
 	}
 }
