@@ -13,15 +13,15 @@ public class CompactDiskLibraryTest {
 	private static final Integer CODE_IN = 10;
 	private static final Integer CODE_OUT = 041;
 
-	private Library<Integer> library;
-	private final Lendable<Integer> lendableIn = new CompactDisk(CODE_IN);
-	private final Lendable<Integer> lendableIn2 = new CompactDisk(CODE_IN);
+	private Library<Integer,CompactDisk> library;
+	private final CompactDisk lendableIn = new CompactDisk(CODE_IN);
+	private final CompactDisk lendableIn2 = new CompactDisk(CODE_IN);
 
 	// private final Lendable lendableOut = new TestLendable(CODE_OUT);
 
 	@Before
 	public void createLibrary() {
-		library = new Library<Integer>();
+		library = new Library<Integer,CompactDisk>();
 		library.returnItem(lendableIn);
 	}
 

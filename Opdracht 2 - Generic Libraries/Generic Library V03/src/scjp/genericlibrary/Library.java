@@ -4,12 +4,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Library<CODE> {
-	Map<CODE, Lendable<CODE>> available = new HashMap<CODE, Lendable<CODE>>();
-	Map<CODE, Lendable<CODE>> due = new HashMap<CODE, Lendable<CODE>>();
+public class Library<C, L extends Lendable<C>> {
+	Map<C, L> available = new HashMap<C, L>();
+	Map<C, L> due = new HashMap<C, L>();
 
-	public Lendable<CODE> lendItem(CODE libraryCode) {
-		Lendable<CODE> item = available.get(libraryCode);
+	public L lendItem(C libraryCode) {
+		L item = available.get(libraryCode);
 		if (item != null) {
 			available.remove(item.getLibraryCode());
 			due.put(item.getLibraryCode(), item);
@@ -18,16 +18,16 @@ public class Library<CODE> {
 		return item;
 	}
 
-	public void returnItem(Lendable<CODE> item) {
+	public void returnItem(L item) {
 		due.remove(item.getLibraryCode());
 		available.put(item.getLibraryCode(), item);
 	}
 
-	public Collection<Lendable<CODE>> availableItems() {
+	public Collection<L> availableItems() {
 		return available.values();
 	}
 
-	public Collection<Lendable<CODE>> dueItems() {
+	public Collection<L> dueItems() {
 		return due.values();
 	}
 }
