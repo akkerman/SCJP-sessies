@@ -8,20 +8,20 @@ import org.junit.Before;
 import org.junit.Test;
 
 @SuppressWarnings("rawtypes")
-public class CompactDiskLibraryTest {
+public class CompactDiscLibraryTest {
 
 	private static final Integer CODE_IN = 10;
 	private static final Integer CODE_OUT = 041;
 
-	private Library<Integer,CompactDisk> library;
-	private final CompactDisk lendableIn = new CompactDisk(CODE_IN);
-	private final CompactDisk lendableIn2 = new CompactDisk(CODE_IN);
+	private Library<Integer,CompactDisc> library;
+	private final CompactDisc lendableIn = new CompactDisc(CODE_IN);
+	private final CompactDisc lendableIn2 = new CompactDisc(CODE_IN);
 
 	// private final Lendable lendableOut = new TestLendable(CODE_OUT);
 
 	@Before
 	public void createLibrary() {
-		library = new Library<Integer,CompactDisk>();
+		library = new Library<Integer,CompactDisc>();
 		library.returnItem(lendableIn);
 	}
 
