@@ -1,5 +1,6 @@
 package scjp.genericlibrary;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,5 +30,15 @@ public class Library<C, L extends Lendable<C>> {
 
 	public Collection<L> dueItems() {
 		return due.values();
+	}
+	
+	public static Collection<? extends Lendable<? extends Object>> allDueItems(Library<?, ? extends Lendable<?>>... libraries) {
+		Collection<? extends Lendable<? extends Object>> collection = new ArrayList<Lendable<? extends Object>>();
+		
+//		for (Library<?, ? extends Lendable<?>> lib : libraries) {
+//			collection.addAll((Collection<?>) lib);			
+//		}
+		
+		return collection;
 	}
 }

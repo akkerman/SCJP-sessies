@@ -34,5 +34,25 @@ class Book implements Lendable<String> {
 	public String toString() {
 		return String.format("Book[%s,%s]", code,title);
 	}
+	
+	public static class Builder {
+		private Book book;
+
+		public Builder(String code) {
+			this.book = new Book(code);
+		}
+		
+		public Builder author(String author) {
+			book.setAuthor(author);
+			return this;
+		}
+		public Builder title(String title) {
+			book.setTitle(title);
+			return this;
+		}
+		public Book create() {
+			return book;
+		}			
+	}
 
 }
