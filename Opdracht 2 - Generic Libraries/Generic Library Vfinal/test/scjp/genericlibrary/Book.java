@@ -1,17 +1,19 @@
 package scjp.genericlibrary;
 
 class Book implements Lendable<String> {
-	private String code;
+	private String libraryCode;
 	private String title;
 	private String author;
 
-	public Book(String code) {
-		this.code = code;
+	public Book(String libraryCode) {
+		if (libraryCode == null)
+			throw new NullPointerException("Library code is mandatory");
+		this.libraryCode = libraryCode;
 	}
 
 	@Override
 	public String getLibraryCode() {
-		return code;
+		return libraryCode;
 	}
 
 	public String getTitle() {
@@ -29,10 +31,26 @@ class Book implements Lendable<String> {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("Book[%s,%s]", code,title);
+		return String.format("Book[%s,%s]", libraryCode, title);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj instanceof Book) {
+			Book that = (Book) obj;
+			return this.libraryCode.equals(that.libraryCode);
+		}
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return 13 * libraryCode.hashCode();
 	}
 	
 	public static class Builder {

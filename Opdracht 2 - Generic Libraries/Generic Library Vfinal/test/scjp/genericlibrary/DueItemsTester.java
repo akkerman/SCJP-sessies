@@ -25,11 +25,11 @@ public class DueItemsTester {
 					.create()
 				);
 		
-		Library<Integer,CompactDisk> cdLibrary = new Library<Integer, CompactDisk>();
+		Library<Integer,CompactDisc> cdLibrary = new Library<Integer, CompactDisc>();
 		
-		cdLibrary.returnItem(new CompactDisk(1));
-		cdLibrary.returnItem(new CompactDisk(2));
-		cdLibrary.returnItem(new CompactDisk(3));
+		cdLibrary.returnItem(new CompactDisc(1));
+		cdLibrary.returnItem(new CompactDisc(2));
+		cdLibrary.returnItem(new CompactDisc(3));
 		
 		
 		bookLibrary.lendItem("978-0596527754");
