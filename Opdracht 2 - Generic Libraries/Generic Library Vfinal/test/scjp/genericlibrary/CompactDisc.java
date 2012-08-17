@@ -1,6 +1,7 @@
 package scjp.genericlibrary;
 
-public class CompactDisc implements Lendable<Integer> {
+public class CompactDisc implements Lendable<Integer>, Comparable<CompactDisc> {
+
 	private Integer libraryCode;
 	private String name;
 	private String artist;
@@ -34,7 +35,7 @@ public class CompactDisc implements Lendable<Integer> {
 
 	@Override
 	public String toString() {
-		return String.format("CompactDisc[%s,%s]", libraryCode, name);
+		return String.format("CompactDisc(%d){%s,%s}", libraryCode, artist, name);
 	}
 
 	@Override
@@ -51,6 +52,42 @@ public class CompactDisc implements Lendable<Integer> {
 	@Override
 	public int hashCode() {
 		return 7 * libraryCode.hashCode();
+	}
+	
+	public static class Builder {
+
+		private CompactDisc cd;
+
+		public Builder(Integer libraryCode) {
+			this.cd = new CompactDisc(libraryCode);
+		}
+		public CompactDisc create() {
+			return cd;
+		}
+		public Builder artist(String artist) {
+			cd.setArtist(artist);
+			return this;
+		}
+		public Builder title(String title) {
+			cd.setName(title);
+			return this;
+		}
+	}
+
+	@Override
+	public int compareTo(CompactDisc that) {
+		int result = compare(this.artist, that.artist);
+		return result == 0 ? compare(this.name, that.name) : result;
+	}
+	
+	private int compare(String a, String b) {		
+		if (a == null && b == null) 
+			return 0;
+		if (a == null) 
+			return -1;
+		if (b == null)
+			return 1;
+		return a.compareToIgnoreCase(b);
 	}
 
 }

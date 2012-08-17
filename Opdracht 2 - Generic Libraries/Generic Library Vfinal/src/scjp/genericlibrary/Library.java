@@ -2,8 +2,10 @@ package scjp.genericlibrary;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeSet;
 
 public class Library<C, L extends Lendable<C>> {
 	Map<C, L> available = new HashMap<C, L>();
@@ -25,15 +27,27 @@ public class Library<C, L extends Lendable<C>> {
 	}
 
 	public Collection<L> availableItems() {
-		return available.values();
+		return prepareItemsForOutput(available.values());
 	}
 
 	public Collection<L> dueItems() {
-		return due.values();
+		return prepareItemsForOutput(due.values());
+	}
+
+	private Collection<L> prepareItemsForOutput(Collection<L> items) {
+		if (canCompare(items))
+			items = new TreeSet<L>(items);		
+		return Collections.unmodifiableCollection(items);
+	}
+	
+	private boolean canCompare(Collection<L> items) {
+		if (items == null || items.isEmpty())
+			return false;
+		L item = items.iterator().next();
+		return item instanceof Comparable<?>;
 	}
 
 	public static Collection<Lendable<?>> allDueItems(Library<?, ?>... libraries) {
-
 		Collection<Lendable<?>> dueitems = new ArrayList<Lendable<?>>();
 
 		for (Library<?, ?> lib : libraries) {
