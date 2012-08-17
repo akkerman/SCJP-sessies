@@ -99,8 +99,8 @@ How would you make sure the client will not get away with it?
 Suppose a client wants items in the library sorted and have some control over the ordering by implementing the `Comparable` interface.   
 How would you support this requirement?
 
-P.S: to appreciate the difficulty of this requirement you may NOT assume each client will actually implement this `Comparable` interface.
-Test by implementing it only on CompactDisc and NOT on Book
+P.S: to appreciate the difficulty of this requirement you may __not__ assume each client will actually implement this `Comparable` interface.
+Test by implementing it only on `CompactDisc` and __not__ on `Book`
 
  
 
