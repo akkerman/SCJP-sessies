@@ -47,7 +47,7 @@ public final class LibraryFactory {
 	}
 
 	public static Library<Integer,CompactDisc> cdLibrary() {
-		Library<Integer, CompactDisc> lib = new Library<Integer,CompactDisc>();
+		Library<Integer, CompactDisc> lib = new SortedLibrary<Integer,CompactDisc>();
 		
 		// top 10 uit album top 100 d.d. 17-8-2012
 		lib.returnItem(new CompactDisc.Builder(1).artist("HELENE FISCHER").title("FUR EINEN TAG").create());
