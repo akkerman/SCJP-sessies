@@ -7,10 +7,6 @@ __ISBN-13__: 978-0071591065
 
 Opdracht 1 - The Diamond Problem
 --------------------------------
-<<<<<<< HEAD
-Referentie implementatie voor opdracht ter voorbereiding van Hoofdstuk 1 en Hoofdstuk 2.  
-Zie de readme.md in het project voor de originele opdracht omschrijving.
-=======
 Referentie implementatie voor opdracht ter voorbereiding van Hoofdstuk 1 en Hoofdstuk 2.
 Zie de [README.md](https://github.com/akkerman/SCJP-sessies/blob/master/Opdracht%201%20-%20The%20Diamond%20Problem/README.md)
 in het project voor de originele opdracht omschrijving.
@@ -20,7 +16,7 @@ Opdracht 2 - Generic Libraries
 Opdracht stub voor de opdracht ter voor bereiding van Hoofdstuk 7 over Generics and Collections.
 Zie de [README.md](https://github.com/akkerman/SCJP-sessies/blob/master/Opdracht%202%20-%20Generic%20Libraries/README.md)
 in het project voor de opdracht omschrijving.
->>>>>>> branch 'master' of https://github.com/akkerman/SCJP-sessies.git
+
 
 Sessie 1 - H1,H2
 -------------------
