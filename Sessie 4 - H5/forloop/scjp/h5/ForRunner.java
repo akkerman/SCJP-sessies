@@ -14,9 +14,9 @@ public class ForRunner {
 	}
 
 	int init()         
-	     { System.out.println("init");   return 0; }
-	int max()          
-	     { System.out.println("max");    return 3;   } 
+	     { System.out.println("init");   return 0;  }
+	int max()
+	     { System.out.println("max");    return 3;  } 
 	int iterate(int i) 
 	     { System.out.println("iterate");return i+1; } 
 }

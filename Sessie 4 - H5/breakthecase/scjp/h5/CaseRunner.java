@@ -1,3 +1,4 @@
+package scjp.h5;
 public class CaseRunner {
 
 	public static void main(String[] args) {
