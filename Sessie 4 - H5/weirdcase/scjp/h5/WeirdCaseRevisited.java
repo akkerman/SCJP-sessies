@@ -1,9 +1,10 @@
 package scjp.h5;
 
-public class WeirdCase {
+public class WeirdCaseRevisited {
 	public static void main(String[] args) {		
-		switch (args.length >= 0) {
-			case true: 
+		switch (args.length) {
+			case 1:
+			case 2:
 				{ final Short var = 12; System.out.println(var);	}
 				{ final String var = "12"; System.out.println(var);	}
 			default: {
@@ -12,11 +13,3 @@ public class WeirdCase {
 		}
 	}
 }
-
-//explain what happens when the program is called like:
-
-// 1.
-// java scjp.h5.WeirdCase
-
-// 2.
-// java scjp.h5.WeirdCase hello world

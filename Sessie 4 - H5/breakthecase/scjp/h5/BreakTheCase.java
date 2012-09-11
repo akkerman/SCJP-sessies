@@ -1,5 +1,6 @@
 package scjp.h5;
-public class CaseRunner {
+
+public class BreakTheCase {
 
 	public static void main(String[] args) {
 		fl: for (int i = 1, j = 0; i < 4; i++, j = i % 2) {
@@ -8,12 +9,12 @@ public class CaseRunner {
 				System.out.println(i + " is odd");
 				break fl;
 			default:
-				throw new AssertionError("unexpected " + j);				
+				throw new AssertionError("unexpected " + j);
 			case 0:
 				System.out.println(i + " is even");
-				break sl;				
+				break sl;
 			}
-			System.out.println("please, print me!"); // Q:is this going to be printed?
+			System.out.println("please, print me!"); // Q:is this going to be printed? why?
 		}
 	}
 }
