@@ -3,7 +3,7 @@ package scjp.h5;
 public class BreakTheCase {
 
 	public static void main(String[] args) {
-		fl: for (int i = 1, j = 0; i < 4; i++, j = i % 2) {
+		fl: for (int i = 1, j = 0; i < 4; j = i++ % 2) {
 			sl: switch (j) {
 			case 1:
 				System.out.println(i + " is odd");

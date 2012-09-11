@@ -11,14 +11,10 @@ public class AssertThat {
 
 // explain what happens for the following command-line invocations:
 
-// 1.
-// java scjp.h5.AssertThat
+// 1. java scjp.h5.AssertThat
 
-// 2.
-// java -enableassertions scjp.h5.AssertThat
+// 2. java -enableassertions scjp.h5.AssertThat
 
-// 3.
-// java -enableassertions scjp.h5.AssertThat hello
+// 3. java -enableassertions scjp.h5.AssertThat hello
 
-// 4.
-// java -enableassertions scjp.h5.AssertThat test
+// 4. java -enableassertions scjp.h5.AssertThat test

@@ -13,10 +13,8 @@ public class WeirdCase {
 	}
 }
 
-//explain what happens when the program is called like:
+// explain what happens for the following command-line invocations:
 
-// 1.
-// java scjp.h5.WeirdCase
+// 1. java scjp.h5.WeirdCase
 
-// 2.
-// java scjp.h5.WeirdCase hello world
+// 2. java scjp.h5.WeirdCase hello world

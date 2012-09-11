@@ -13,3 +13,8 @@ public class WeirdCaseRevisited {
 		}
 	}
 }
+// explain what happens for the following command-line invocations:
+
+//1. java scjp.h5.WeirdCaseRevisited
+
+//2. java scjp.h5.WeirdCaseRevisited hello world
