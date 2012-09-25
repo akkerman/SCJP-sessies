@@ -10,11 +10,11 @@
 		}
 	}
 
-explain what happens for the following command-line invocations:
-1.  java AssertThat
-2.  java -enableassertions AssertThat
-3.  java -enableassertions AssertThat hello
-4.  java -enableassertions AssertThat test
+explain what happens for the following command-line invocations:  
+1.  java AssertThat  
+2.  java -enableassertions AssertThat  
+3.  java -enableassertions AssertThat hello  
+4.  java -enableassertions AssertThat test  
 
 ---
 
@@ -56,9 +56,9 @@ explain what happens for the following command-line invocations:
 		}
 	}
 
-explain what happens for the following command-line invocations:
-1. java scjp.h5.WeirdCase
-2. java scjp.h5.WeirdCase hello world
+explain what happens for the following command-line invocations:  
+1. java scjp.h5.WeirdCasen  
+2. java scjp.h5.WeirdCase hello world  
 
 ---
 
@@ -78,9 +78,9 @@ explain what happens for the following command-line invocations:
 		}
 	}
 
-explain what happens for the following command-line invocations:
-1. java scjp.h5.WeirdCaseRevisited
-2. java scjp.h5.WeirdCaseRevisited hello world
+explain what happens for the following command-line invocations:  
+1. java scjp.h5.WeirdCaseRevisited  
+2. java scjp.h5.WeirdCaseRevisited hello world  
 
 --- 
 
