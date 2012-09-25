@@ -38,3 +38,11 @@ Sessie 2 - H4
 -------------
 De opgaven in de sessie van Adam  
 *Hoofdstuk 4 - Operators*
+
+Sessie 3 - Examentraining
+-------------------------
+
+Sessie 4 - H5
+-------------
+De opgaven in de sessie van Marcel
+*Hoofdstuk 5 - Flow Control, Exceptions, and Assertions*
