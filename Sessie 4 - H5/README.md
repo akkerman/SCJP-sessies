@@ -35,9 +35,9 @@ explain what happens for the following command-line invocations:
 		}
 	}
 
-explain what happens for the following command-line invocations:
-1. java Errrrr
-2. java Errrrr x 
+explain what happens for the following command-line invocations:  
+1. java Errrrr  
+2. java Errrrr x  
 
 ---
 
