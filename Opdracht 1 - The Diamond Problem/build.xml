@@ -7,7 +7,6 @@
     <property name="source" value="1.6"/>
     <path id="Opdracht 1 - The Diamond Problem.classpath">
         <pathelement location="bin"/>
-        <path refid="JUnit 4.libraryclasspath"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
