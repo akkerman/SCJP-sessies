@@ -49,10 +49,10 @@ De opgaven in de sessie van Marcel
 
 Sessie 5 - H6
 -------------
-De opgaven in de sessie van Romeo
+De opgaven in de sessie van Romeo  
 *Hoofdstuk 6 - Strings, I/O, Formatting, and Parsing*
 
 Sessie 6 - H7
 -------------
-De opgaven in de sessie van Marcel
+De opgaven in de sessie van Marcel  
 *Hoofdstuk 7 - Generics and Collections*
