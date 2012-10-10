@@ -46,3 +46,13 @@ Sessie 4 - H5
 -------------
 De opgaven in de sessie van Marcel  
 *Hoofdstuk 5 - Flow Control, Exceptions, and Assertions*
+
+Sessie 5 - H6
+-------------
+De opgaven in de sessie van Romeo
+*Hoofdstuk 6 - Strings, I/O, Formatting, and Parsing*
+
+Sessie 6 - H7
+-------------
+De opgaven in de sessie van Marcel
+*Hoofdstuk 7 - Generics and Collections*
