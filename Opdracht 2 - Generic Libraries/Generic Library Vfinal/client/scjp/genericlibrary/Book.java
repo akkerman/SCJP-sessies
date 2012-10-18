@@ -1,6 +1,8 @@
 package scjp.genericlibrary;
 
-class Book implements Lendable<String> {
+import nl.viewsource.util.FluentInterface;
+
+public class Book implements Lendable<String> {
 	private String libraryCode;
 	private String title;
 	private String author;
@@ -53,24 +55,13 @@ class Book implements Lendable<String> {
 		return 13 * libraryCode.hashCode();
 	}
 	
-	public static class Builder {
-		private Book book;
-
-		public Builder(String code) {
-			this.book = new Book(code);
-		}
-		
-		public Builder author(String author) {
-			book.setAuthor(author);
-			return this;
-		}
-		public Builder title(String title) {
-			book.setTitle(title);
-			return this;
-		}
-		public Book create() {
-			return book;
-		}			
+	public static BookBuilder build(String code) {
+		return FluentInterface.create(new Book(code), BookBuilder.class);
 	}
-
+		
+	public static interface BookBuilder {
+		BookBuilder author(String author);
+		BookBuilder title(String title);
+		Book create();
+	}
 }

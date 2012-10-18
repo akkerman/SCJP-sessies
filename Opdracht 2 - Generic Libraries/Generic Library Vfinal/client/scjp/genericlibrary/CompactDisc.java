@@ -1,5 +1,7 @@
 package scjp.genericlibrary;
 
+import nl.viewsource.util.FluentInterface;
+
 public class CompactDisc implements Lendable<Integer>, Comparable<CompactDisc> {
 
 	private Integer libraryCode;
@@ -54,26 +56,6 @@ public class CompactDisc implements Lendable<Integer>, Comparable<CompactDisc> {
 		return 7 * libraryCode.hashCode();
 	}
 	
-	public static class Builder {
-
-		private CompactDisc cd;
-
-		public Builder(Integer libraryCode) {
-			this.cd = new CompactDisc(libraryCode);
-		}
-		public CompactDisc create() {
-			return cd;
-		}
-		public Builder artist(String artist) {
-			cd.setArtist(artist);
-			return this;
-		}
-		public Builder title(String title) {
-			cd.setName(title);
-			return this;
-		}
-	}
-
 	@Override
 	public int compareTo(CompactDisc that) {
 		int result = compare(this.artist, that.artist);
@@ -88,6 +70,16 @@ public class CompactDisc implements Lendable<Integer>, Comparable<CompactDisc> {
 		if (b == null)
 			return 1;
 		return a.compareToIgnoreCase(b);
+	}
+	
+	public static CDBuilder build(Integer code) {
+		return FluentInterface.create(new CompactDisc(code), CDBuilder.class);
+	}
+		
+	public static interface CDBuilder {
+		CDBuilder artist(String author);
+		CDBuilder name(String name);
+		CompactDisc create();
 	}
 
 }
