@@ -56,3 +56,18 @@ Sessie 6 - H7
 -------------
 De opgaven in de sessie van Marcel  
 *Hoofdstuk 7 - Generics and Collections*
+
+Sessie 7 - H8
+-------------
+De opgaven in de sessie van Jermaine  
+*Hoofdstuk 8 - Inner classes*
+
+Sessie 8 - H9
+-------------
+De opgaven in de sessie van Rick
+*Hoofdstuk 9 - Threads*
+
+Sessie 9 - H10
+--------------
+De opgaven in de sessie van Adam
+*Hoofdstuk 10 - Development*
