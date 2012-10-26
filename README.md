@@ -64,10 +64,10 @@ De opgaven in de sessie van Jermaine
 
 Sessie 8 - H9
 -------------
-De opgaven in de sessie van Rick
-*Hoofdstuk 9 - Threads*
+De opgaven in de sessie van Rick  
+*Hoofdstuk 9 - Threads*  
 
 Sessie 9 - H10
 --------------
-De opgaven in de sessie van Adam
-*Hoofdstuk 10 - Development*
+De opgaven in de sessie van Adam  
+*Hoofdstuk 10 - Development*  
