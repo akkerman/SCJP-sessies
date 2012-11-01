@@ -5,6 +5,8 @@ __Boek__: SCJP Sun Certified Programmer for Java 6 Study Guide (CX-310-065): Exa
 __ISBN-10__: 0071591060  
 __ISBN-13__: 978-0071591065  
 
+[![View On Amazon](http://ecx.images-amazon.com/images/I/51%2BT%2Bi0tAtL._SL75_AA32_.jpg "View On Amazon")](http://www.amazon.co.uk/SCJP-Certified-Programmer-Java-310-065/dp/0071591060)
+
 Opdracht 1 - The Diamond Problem
 --------------------------------
 Referentie implementatie voor opdracht ter voorbereiding van Hoofdstuk 1 en Hoofdstuk 2.
@@ -56,3 +58,18 @@ Sessie 6 - H7
 -------------
 De opgaven in de sessie van Marcel  
 *Hoofdstuk 7 - Generics and Collections*
+
+Sessie 7 - H8
+-------------
+De opgaven in de sessie van Jermaine  
+*Hoofdstuk 8 - Inner classes*
+
+Sessie 8 - H9
+-------------
+De opgaven in de sessie van Rick  
+*Hoofdstuk 9 - Threads*  
+
+Sessie 9 - H10
+--------------
+De opgaven in de sessie van Adam  
+*Hoofdstuk 10 - Development*  
