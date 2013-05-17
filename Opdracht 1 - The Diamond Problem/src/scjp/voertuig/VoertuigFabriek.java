@@ -87,27 +87,40 @@ class BootImpl extends VoertuigImpl implements Boot {
 class AmfibieImpl extends VoertuigImpl implements Amfibie {
 	private final Auto auto;
 	private final Boot boot;
+    private Voertuig mode;
 
 	public AmfibieImpl(String naam) {
 		super(naam);
 		auto = new AutoImpl(naam);
 		boot = new BootImpl(naam);
+        setMode(auto);
 	}
 
-	@Override
+    @Override
 	public void vaar() {
+        setMode(boot);
 		boot.vaar();
 	}
 
 	@Override
 	public void rij() {
+        setMode(auto);
 		auto.rij();
 	}
 	
 	@Override
 	public void setSnelheid(int snelheid) {
-		super.setSnelheid(snelheid);
-		auto.setSnelheid(snelheid);
-		boot.setSnelheid(snelheid);
+        mode.setSnelheid(snelheid);
 	}
+
+    @Override
+    public int getSnelheid() {
+        return mode.getSnelheid();
+    }
+
+    private void setMode(Voertuig voertuig) {
+        if (mode == voertuig) return;
+        voertuig.setSnelheid(0);
+        mode = voertuig;
+    }
 }
